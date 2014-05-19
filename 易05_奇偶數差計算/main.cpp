@@ -12,16 +12,16 @@ int main()
     while(input[i] != '\0')
     {
         if(i %2)
-            sumOdd++;
+            sumOdd += input[i]-'0';
         else
-            sumEven++;
+            sumEven += input[i]-'0';
         i++;
     }
 
-    if(!(sumOdd - sumEven)%11)
-        cout << input <<"之奇數差為11的倍數" << endl;
-    else
+    if((sumOdd - sumEven)%11)
         cout <<  input <<"之奇偶數差不是11的倍數" << endl;
+    else
+        cout << input <<"之奇偶數差為11的倍數" << endl;
 
     return 0;
 }
